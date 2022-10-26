@@ -21,6 +21,5 @@ jobs:
     # Note: `make deploy` will do a deploy dry run on PRs.
     - run: make deploy
       env:
-        SERVER: ${{ secrets.MARQUEE_SERVER }}
-        SERVER_PUBLIC_KEY: ${{ secrets.MARQUEE_PUBLIC_KEY }}
-        SERVER_DEPLOY_KEY: ${{ secrets.MARQUEE_DEPLOY_KEY }}
+        SERVER: ${{ secrets.SERVER_IP  }}
+        SERVER_PUBLIC_KEY: ${{ secrets.SSH_PRIVATE_KEY  }}
