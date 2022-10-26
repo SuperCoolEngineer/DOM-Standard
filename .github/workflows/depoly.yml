@@ -14,7 +14,7 @@ jobs:
         id: vars
         shell: bash
         run: |
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          echo "::set-output name=sha_short::$(git rev-parse  HEAD)"
       
       - uses: w3c/spec-prod@v2
         with:
