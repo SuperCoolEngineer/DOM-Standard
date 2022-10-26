@@ -12,7 +12,7 @@ jobs:
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BUILD_OVERRIDE: |
-             Text-Macro: COMMIT-SHA LOCAL COPY
+             Text-Macro: COMMIT-SHA bf5f6c2a8f2d770da884cb52f5625c59b5a880e7
           GH_PAGES_BRANCH: depoly
           TOOLCHAIN: bikeshed
           SOURCE: dom.bs
