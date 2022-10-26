@@ -9,10 +9,17 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
+      
+      - name: Declare some variables
+        id: vars
+        shell: bash
+        run: |
+          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+      
       - uses: w3c/spec-prod@v2
         with:
           GH_PAGES_BUILD_OVERRIDE: |
-             Text-Macro:${{ github.sha }}
+             Text-Macro:${{ steps.vars.outputs.sha_short }}
           GH_PAGES_BRANCH: depoly
           TOOLCHAIN: bikeshed
           SOURCE: dom.bs
