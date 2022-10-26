@@ -13,5 +13,5 @@ jobs:
       - uses: actions/checkout@v3
       - uses: w3c/spec-prod@v2
         with:
-          TOOLCHAIN: respec # or bikeshed
+          TOOLCHAIN: bikeshed
           SOURCE: src/dom.bs
