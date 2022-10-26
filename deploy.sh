@@ -183,7 +183,7 @@ if [[ "$GITHUB_ACTIONS" == "true" ]]; then
     echo ""
 fi
 
-# Deploy from push to main branch on non-forks only
+# Deploy from push to main branch on  non-forks only
 if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
      header "rsync to the WHATWG server..."
      eval "$(ssh-agent -s)"
