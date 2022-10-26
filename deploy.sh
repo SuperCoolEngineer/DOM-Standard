@@ -11,7 +11,7 @@ set -o nounset
 SHORTNAME=$(git config --local remote.origin.url | sed 's/.*\///' | sed 's/.git//')
 INPUT_FILE=$(find . -maxdepth 1 -name "*.bs" -print -quit)
 
-WEB_ROOT="$SHORTNAME.spec.whatwg.org"
+WEB_ROOT="$SHORTNAME"
 COMMITS_DIR="commit-snapshots"  
 REVIEW_DRAFTS_DIR="review-drafts"
 
@@ -184,15 +184,16 @@ if [[ "$GITHUB_ACTIONS" == "true" ]]; then
 fi
 
 # Deploy from push to main branch on non-forks only
-if [[ "$GITHUB_REPOSITORY" == whatwg/* && "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
-    header "rsync to the WHATWG server..."
-    eval "$(ssh-agent -s)"
-    echo "$SERVER_DEPLOY_KEY" | ssh-add -
-    mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
-    # No --delete as that would require extra care to not delete snapshots.
-    # --chmod=D755,F644 means read-write for user, read-only for others.
+if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
+     header "rsync to the WHATWG server..."
+     eval "$(ssh-agent -s)"
+      echo "$SERVER_DEPLOY_KEY" | ssh-add -
+      mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
+     #No --delete as that would require extra care to not delete snapshots.
+   # --chmod=D755,F644 means read-write for user, read-only for others.
     rsync --verbose --archive --chmod=D755,F644 --compress \
-          "$WEB_ROOT" "deploy@$SERVER:/var/www/"
-else
+         "$WEB_ROOT" "deploy@$SERVER:/home/www/htdocs/wangjunliang/"
+
+else 
     header "Skipping deploy"
 fi
