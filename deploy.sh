@@ -191,7 +191,7 @@ if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; t
       mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
      #No --delete as that would require extra care to not delete snapshots.
    # --chmod=D755,F644 means read-write for user, read-only for others.
-    sudo rsync --verbose --archive --chmod=D755,F644 --compress \
+     rsync --verbose --archive  --compress \
        "$WEB_ROOT" "deploy@$SERVER:/home/www/htdocs/wangjunliang/"
 
 else 
