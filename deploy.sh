@@ -187,7 +187,7 @@ fi
 if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
      header "rsync to the WHATWG server..."
      eval "$(ssh-agent -s)"
-     eval "$(ssh-keygen -R $SERVER)"
+    # eval "$(ssh-keygen -R $SERVER)"
       echo "$SERVER_DEPLOY_KEY" | ssh-add -
       mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
      #No --delete as that would require extra care to not delete snapshots.
