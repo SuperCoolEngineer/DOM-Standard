@@ -186,10 +186,9 @@ fi
 # Deploy from push to main branch on  non-forks only
 if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
      header "rsync to the WHATWG server..."
-      eval "$(rm -rf ~/.ssh/known_hosts)"
       eval "$(ssh-agent -s)"
-      echo "$SERVER_DEPLOY_KEY" | ssh-add -
       mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
+      echo "$SERVER_DEPLOY_KEY" | ssh-add -
      #No --delete as that would require extra care to not delete snapshots.
    # --chmod=D755,F644 means read-write for user, read-only for others.
     rsync --verbose --archive --chmod=D755,F644 --compress \
