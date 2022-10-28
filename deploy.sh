@@ -193,7 +193,7 @@ if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; t
     # No --delete as that would require extra care to not delete snapshots.
     # --chmod=D755,F644 means read-write for user, read-only for others.
     rsync --verbose --archive --chmod=D755,F644 --compress \
-          "$WEB_ROOT" "deploy@$SERVER:/var/www/"
+          "$WEB_ROOT" "root@$SERVER:/var/www/"
 else 
     header "Skipping deploy"
 fi
