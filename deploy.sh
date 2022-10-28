@@ -102,13 +102,13 @@ echo ""
 header "Starting commit snapshot..."
 COMMIT_DIR="$WEB_ROOT/$COMMITS_DIR/$SHA"
 mkdir -p "$COMMIT_DIR"
-curlbikeshed "$INPUT_FILE" \
+#curlbikeshed "$INPUT_FILE" \
              "$COMMIT_DIR/index.html" \
              -F md-status=LS-COMMIT \
              -F md-Text-Macro="COMMIT-SHA $SHA"
-copy_extra_files "$COMMIT_DIR"
-run_post_build_step "$COMMIT_DIR"
-# echo "Commit snapshot output to $COMMIT_DIR"
+#copy_extra_files "$COMMIT_DIR"
+#run_post_build_step "$COMMIT_DIR"
+ echo "Commit snapshot output to $COMMIT_DIR"
 echo ""
 
 header "Starting living standard..."
