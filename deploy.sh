@@ -108,7 +108,7 @@ curlbikeshed "$INPUT_FILE" \
              -F md-Text-Macro="COMMIT-SHA $SHA"
 copy_extra_files "$COMMIT_DIR"
 run_post_build_step "$COMMIT_DIR"
-echo "Commit snapshot output to $COMMIT_DIR"
+# echo "Commit snapshot output to $COMMIT_DIR"
 echo ""
 
 header "Starting living standard..."
