@@ -102,13 +102,13 @@ echo ""
 header "Starting commit snapshot..."
 COMMIT_DIR="$WEB_ROOT/$COMMITS_DIR/$SHA"
 mkdir -p "$COMMIT_DIR"
-#curlbikeshed "$INPUT_FILE" \
+curlbikeshed "$INPUT_FILE" \
              "$COMMIT_DIR/index.html" \
              -F md-status=LS-COMMIT \
              -F md-Text-Macro="COMMIT-SHA $SHA"
-#copy_extra_files "$COMMIT_DIR"
-#run_post_build_step "$COMMIT_DIR"
- echo "Commit snapshot output to $COMMIT_DIR"
+copy_extra_files "$COMMIT_DIR"
+run_post_build_step "$COMMIT_DIR"
+echo "Commit snapshot output to $COMMIT_DIR"
 echo ""
 
 header "Starting living standard..."
@@ -183,16 +183,17 @@ if [[ "$GITHUB_ACTIONS" == "true" ]]; then
     echo ""
 fi
 
-# Deploy from push to main branch on non-forks only
+# Deploy from push to main branch on  non-forks only
 if [[ "$GITHUB_EVENT_NAME" == "push" && "$GITHUB_REF" == "refs/heads/main" ]]; then
-    header "rsync to the WHATWG server..."
-    eval "$(ssh-agent -s)"
-    echo "$SERVER_DEPLOY_KEY" | ssh-add -
-    mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
+     header "rsync to the WHATWG server..."
+      eval "$(ssh-agent -s)"
+      echo "$SERVER_DEPLOY_KEY" | ssh-add -
+
+  mkdir -p ~/.ssh/ && echo "$SERVER $SERVER_PUBLIC_KEY" > ~/.ssh/known_hosts
     # No --delete as that would require extra care to not delete snapshots.
     # --chmod=D755,F644 means read-write for user, read-only for others.
     rsync --verbose --archive --chmod=D755,F644 --compress \
           "$WEB_ROOT" "deploy@$SERVER:/var/www/"
-else
+else 
     header "Skipping deploy"
 fi
