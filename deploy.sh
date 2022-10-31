@@ -228,9 +228,7 @@ if [ -z "$(git status --porcelain)" ]; then
 fi
 
 # Final repository
-if [[ -z "$COMMIT_MESSAGE" ]]; then
-  COMMIT_MESSAGE="Auto deploy from Github Actions"
-fi
+COMMIT_MESSAGE="Auto deploy from Github Actions"
 
 git add .
 git commit -m "$COMMIT_MESSAGE"
