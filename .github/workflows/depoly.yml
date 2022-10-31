@@ -25,5 +25,5 @@ jobs:
         SERVER_PUBLIC_KEY: ${{ secrets.SERVER_KEY}}
         SERVER_DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
         ACCESS_TOKEN: ${{ secrets.SECRET }}
-        TARGET_REPO: JunLiangWangX/HTML-Guide
+        TARGET_REPO: JunLiangWangX/DOM-Standard
         TARGET_BRANCH: deploy
