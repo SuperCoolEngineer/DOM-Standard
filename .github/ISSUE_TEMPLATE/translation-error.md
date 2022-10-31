@@ -2,7 +2,7 @@
 name: Translation Error
 about: Report document translation errors
 title: "[Translation Error]"
-labels: Translation Error
+labels: ''
 assignees: ''
 
 ---
