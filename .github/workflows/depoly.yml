@@ -24,3 +24,12 @@ jobs:
         SERVER: ${{ secrets.SERVER_IP  }}
         SERVER_PUBLIC_KEY: ${{ secrets.SERVER_KEY}}
         SERVER_DEPLOY_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
+        
+    - name: "GitHub Push"
+      if: ${{ GITHUB_EVENT_NAME == 'push' }}
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{secrets.SECRET}}
+        repository: JunLiangWangX/DOM-Standard
+        branch: deploy
+        directory: DOM-Standard
