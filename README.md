@@ -1,4 +1,7 @@
 <p align="center"><img src='./resource/logo.svg'></p>
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center">
   <a href="https://github.com/JunLiangWangX/DOM-Standard" target="_blank">
@@ -33,6 +36,20 @@
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="http://wangjunliang.com"><img src="https://avatars.githubusercontent.com/u/40155337?v=4?s=100" width="100px;" alt="JunLiangWang"/><br /><sub><b>JunLiangWang</b></sub></a><br /><a href="#projectManagement-JunLiangWangX" title="Project Management">📆</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
