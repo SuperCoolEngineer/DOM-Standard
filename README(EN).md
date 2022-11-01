@@ -28,7 +28,7 @@
     <a href="https://wangjunliang.com/DOM-Standard/"><img src='./resource/domestic-site-btn(EN).svg'></a>
     <a href="https://junliangwangx.github.io/DOM-Standard/"><img src='./resource/foreign-sites-btn(EN).svg'></a>
 </p>
-<p align='center'><a href='./README.md'>中文</a> &nbsp&nbsp&nbsp <a href='./README(EN).md'>English</a></p>
+<p align='center'> <a href='./README.md'>中文</a> &nbsp&nbsp&nbsp <a href='./README(EN).md'>English</a></p>
 
 ## Contributors
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
