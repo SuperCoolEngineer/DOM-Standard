@@ -31,8 +31,21 @@
 <p align='center'><a href='./README.md'>中文</a> &nbsp&nbsp&nbsp <a href='./README(EN).md'>English</a></p>
 
 ## Contributors
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="http://wangjunliang.com"><img src="https://avatars.githubusercontent.com/u/40155337?v=4?s=100" width="100px;" alt="JunLiangWang"/><br /><sub><b>JunLiangWang</b></sub></a><br /><a href="#projectManagement-JunLiangWangX" title="Project Management">📆</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 
@@ -40,3 +53,19 @@
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification, and contributions of any kind are welcome!
+
+## How to contribute
+
+If you find project bugs, translation errors, or are interested in participating in translation work and making suggestions, please follow the rules below:
+
+- Submit an [issue](https://github.com/JunLiangWangX/DOM-Standard/issues)，before submitting an issue, please search whether the relevant content has been raised
+- Fork a copy to your own project, don't build a branch directly under the warehouse.
+- commit 信息请描写准确，并且必须关联相关的issue
+- Please describe the commit message accurately and must be associated with the relevant issue
+- Make sure the PR is committed to the `main` branch, not another branch
+- If you think the local compilation is too complicated, you can see the compilation details in the check column after submitting the PR
+
+## Build locally
+
+Local Build Preview Project Reference[WHATWG Contributor Guidelines](https://github.com/whatwg/meta/blob/main/CONTRIBUTING.md#building)
