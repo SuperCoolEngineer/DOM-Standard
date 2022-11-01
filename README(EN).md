@@ -61,7 +61,7 @@ If you find project bugs, translation errors, or are interested in participating
 
 - Submit an [issue](https://github.com/JunLiangWangX/DOM-Standard/issues)，before submitting an issue, please search whether the relevant content has been raised
 - Fork a copy to your own project, don't build a branch directly under the warehouse.
-- commit 信息请描写准确，并且必须关联相关的issue
+- commit Please describe the commit message accurately and must be associated with the relevant issue
 - Please describe the commit message accurately and must be associated with the relevant issue
 - Make sure the PR is committed to the `main` branch, not another branch
 - If you think the local compilation is too complicated, you can see the compilation details in the check column after submitting the PR
